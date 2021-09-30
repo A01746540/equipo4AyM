@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/A01746540/equipo4AyM/issues"
   },
-  "homepage": "https://github.com/A01746540/equipo4AyM#readme"
+  "homepage": "https://github.com/A01746540/equipo4AyM#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.0",
+    "nodemon": "^2.0.13",
+    "sequelize": "^6.6.5"
+  }
 }
