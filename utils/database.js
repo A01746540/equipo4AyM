@@ -2,9 +2,9 @@
 const Sequelize = require("sequelize")
 const { aplicarRelaciones } = require('./relations')
     //Nombre de la base, usuario, contraseña
-const sequelize = new Sequelize('base2', 'user1', 'root', {
+const sequelize = new Sequelize('AlexisyMaxine', 'user4', 'root', {
     dialect: 'mysql', //3306 port
-    host: '3.94.165.232',
+    host: '18.234.222.26',
     define: {
         //Evitar que nos ponga createdAt y updateAt
         timestamps: false,
