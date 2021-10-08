@@ -4,15 +4,15 @@ const router = express.Router()
 
 
 //Formulario de ingreso de datos (front-end) 
-//router.get('/agregarConsolaVideojuego',conController.getAgregarConsolaVideojuego)
+//router.get('/agregarConsolaVideojuego',convjController.getAgregarConsolaVideojuego)
 //Servicio para el procesamiento de los datos
-router.post('/agregarConsolaVideojuego', conController.postAgregarConsolaVideojuego)
+router.post('/agregarConsolaVideojuego', convjController.postAgregarConsolaVideojuego)
     //Pagina de confirmacion (front-end)
-    //router.get('/confirmacionDatos',conController.getConfirmacionDatos)
+    //router.get('/confirmacionDatos',convjController.getConfirmacionDatos)
     //Visualización de los datos guardados
-router.get('/obtenerConsolaVideojuegos', conController.getObtenerConsolaVideojuegos)
-router.post('/borrarConsolaVideojuego', conController.postBorrarConsolaVideojuego)
-router.post('/actualizarConsolaVideojuego', conController.postActualizarConsolaVideojuego)
+router.get('/obtenerConsolaVideojuegos', convjController.getObtenerConsolaVideojuegos)
+router.post('/borrarConsolaVideojuego', convjController.postBorrarConsolaVideojuego)
+router.post('/actualizarConsolaVideojuego', convjController.postActualizarConsolaVideojuego)
 
 
 module.exports = router
