@@ -6,6 +6,8 @@ const sequelize = require('./utils/database')
 
 //Importar rutas
 const vjRoutes = require('./routes/videojuegos')
+const conRoutes = require('./routes/consolas')
+    //const convjRoutes = require('./routes/consolasVideojuegos')
     //Crear una aplicación web
 const app = express();
 
@@ -19,6 +21,8 @@ app.set('view engine', 'ejs')
 
 //Vinculamos la aplicación con los recursos de videojuegos
 app.use('/videojuegos', vjRoutes);
+app.use('/consolas', conRoutes);
+//app.use('/consolas', convjRoutes);
 
 app.get('/mipagina', (request, response) => {
     response.sendFile(path.join(__dirname, 'views', 'index.html'))
@@ -75,8 +79,8 @@ app.get('/plantillaEJS', (req, res) => {
 //sequelize.sync({force:true})
 sequelize.sync()
     .then(
-        app.listen(8080, () => {
-            console.log("Servidor online en el puerto 8080")
+        app.listen(8084, () => {
+            console.log("Servidor online en el puerto 8084")
         })
     )
     .catch(err => console.log(err))
