@@ -84,3 +84,4 @@ sequelize.sync()
         })
     )
     .catch(err => console.log(err))
+    // Comentario que hace la diferencia
