@@ -22,7 +22,7 @@ app.set('view engine', 'ejs')
 //Vinculamos la aplicación con los recursos de videojuegos
 app.use('/videojuegos', vjRoutes);
 app.use('/consolas', conRoutes);
-app.use('/consolas', convjRoutes);
+app.use('/consolaVideojuego', convjRoutes);
 
 app.get('/mipagina', (request, response) => {
     response.sendFile(path.join(__dirname, 'views', 'index.html'))
