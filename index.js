@@ -7,7 +7,7 @@ const sequelize = require('./utils/database')
 //Importar rutas
 const vjRoutes = require('./routes/videojuegos')
 const conRoutes = require('./routes/consolas')
-const convjRoutes = require('./routes/consolasVideojuegos')
+const convjRoutes = require('./routes/consolaVideojuego')
     //Crear una aplicación web
 const app = express();
 
