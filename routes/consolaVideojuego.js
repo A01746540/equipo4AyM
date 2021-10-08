@@ -1,5 +1,5 @@
 const express = require("express")
-const convjController = require('../controllers/consolaVideojuegos')
+const convjController = require('../controllers/consolaVideojuego')
 const router = express.Router()
 
 
