@@ -1,18 +1,18 @@
 const express = require("express")
-const vjController = require('../controllers/Consolas')
+const conController = require('../controllers/Consolas')
 const router = express.Router()
 
 
 //Formulario de ingreso de datos (front-end) 
-//router.get('/agregarConsola',vjController.getAgregarConsola)
+//router.get('/agregarConsola',conController.getAgregarConsola)
 //Servicio para el procesamiento de los datos
-router.post('/agregarConsola', vjController.postAgregarConsola)
+router.post('/agregarConsola', conController.postAgregarConsola)
     //Pagina de confirmacion (front-end)
-    //router.get('/confirmacionDatos',vjController.getConfirmacionDatos)
+    //router.get('/confirmacionDatos',conController.getConfirmacionDatos)
     //Visualización de los datos guardados
-router.get('/obtenerConsolas', vjController.getObtenerConsolas)
-router.post('/borrarConsola', vjController.postBorrarConsola)
-router.post('/actualizarConsola', vjController.postActualizarConsola)
+router.get('/obtenerConsolas', conController.getObtenerConsolas)
+router.post('/borrarConsola', conController.postBorrarConsola)
+router.post('/actualizarConsola', conController.postActualizarConsola)
 
 
 module.exports = router

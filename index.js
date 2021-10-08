@@ -7,6 +7,7 @@ const sequelize = require('./utils/database')
 //Importar rutas
 const vjRoutes = require('./routes/videojuegos')
 const conRoutes = require('./routes/consolas')
+    //const convjRoutes = require('./routes/consolasVideojuegos')
     //Crear una aplicación web
 const app = express();
 
@@ -15,37 +16,13 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-    //app.engine('html', require('ejs').renderFile)
-    //app.set('view engine', 'ejs')
+app.engine('html', require('ejs').renderFile)
+app.set('view engine', 'ejs')
 
 //Vinculamos la aplicación con los recursos de videojuegos
 app.use('/videojuegos', vjRoutes);
 app.use('/consolas', conRoutes);
-
-/*
-//Importar rutas
-const vjRoutes = require('./routes/videojuegos')
-const conRoutes = require('./routes/consola')
-const convjRoutes = require('./routes/consolaVideojuego')
-//Crear una aplicación web
-const app = express();
-
-//Establecer un middleware que configure donde se encuentran los
-//recursos públicos
-app.use(express.static(path.join(__dirname,'public')))
-app.use(express.json())
-app.use(express.urlencoded({extended:true}))
-app.engine('html',require('ejs').renderFile)
-app.set('view engine','ejs')
-
-//Vinculamos la aplicación con los recursos de videojuegos
-app.use('/videojuegos',vjRoutes);
-//Vinculamos la aplicación con los recursos de consola
-app.use('/consolas',conRoutes);
-//Vinculamos la aplicación con los recursos de consola Videojuegos
-app.use('/consolaVideojuegos',convjRoutes);
-
-*/
+//app.use('/consolas', convjRoutes);
 
 app.get('/mipagina', (request, response) => {
     response.sendFile(path.join(__dirname, 'views', 'index.html'))
